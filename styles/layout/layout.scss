@@ -1,0 +1,51 @@
+@import './_variables';
+@import "./_mixins";
+@import "./_preloading";
+@import "./_main";
+@import "./_topbar";
+@import "./_menu";
+@import "./_config";
+@import "./_content";
+@import "./_footer";
+@import "./_responsive";
+@import "./_utils";
+@import "./_typography";
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #e31d9409;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #e31d94a8;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.perfil i {
+    line-height: 2.25rem;
+}
+.perfil {
+    background: linear-gradient(to left, #e31d9444 50%, #e31d94be 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.5s ease-out;
+    color: #fff;
+    border-color: #e31d94be;
+    border-radius: 20px;
+}
+.perfil:hover {
+    background-position: left bottom;
+}
+.perfil i {
+    background-color: #e31d94be;
+    border-radius: 50px;
+}
+.perfil:focus {
+    box-shadow: 0 0 0 1px rgba(76, 156, 217, 0.3);
+    background-color: #e31d94be;
+}

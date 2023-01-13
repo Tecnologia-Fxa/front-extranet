@@ -1,0 +1,13 @@
+.inputForm{
+    border: 0 !important;
+    /* padding: 1px !important; */
+}
+.error-input{
+    border-bottom: 1px solid red !important;
+    border-radius: 0% !important;
+}
+
+.toggleButtonStyle{
+    padding: 2px !important;
+    margin-left: 2px !important;
+}
