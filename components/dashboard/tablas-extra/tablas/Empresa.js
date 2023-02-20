@@ -3,7 +3,7 @@ import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
 import { InputText } from 'primereact/inputtext';
 import React, { useEffect, useRef, useState } from 'react';
-import { confirmDialog } from 'primereact/confirmdialog';
+import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
 import { Button } from 'primereact/button';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import classNames from 'classnames';
@@ -201,6 +201,7 @@ const Empresa = (props) => {
                 
                 <Button onClick={formik.handleSubmit} label='Guardar' className='mt-2 w-full'/>
         </OverlayPanel>
+        <ConfirmDialog/>
     </div>;
 };
 

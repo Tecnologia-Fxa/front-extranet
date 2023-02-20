@@ -71,4 +71,8 @@ export class EmpleadoService {
     getRouteImgPerfil(){
         return axios.get(`${API}/default/obtener-img-perfil`)
     }
+
+    cargueMasivo(data){
+        return axios.post(`${API}/cargue-masivo`, data)
+    }
 }

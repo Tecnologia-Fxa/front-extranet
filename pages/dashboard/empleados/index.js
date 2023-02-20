@@ -17,6 +17,7 @@ import Documentos from '../../../components/dashboard/empleados/Documentos';
 import CredencialService from '../../../services/CredencialService';
 
 import DataTableDemo from './DataTableDemo.module.css';
+import CargarArchivo from '../../../components/dashboard/empleados/CargarArchivo';
 
 
 const Empleados = () => {
@@ -97,8 +98,14 @@ const Empleados = () => {
     const [pageState, setPageState] = useState(true)
 
     const [dialogExport, setDialogExport] = useState(false)
+
+    const [dialogImport, setDialogImport] = useState(false)
     
 
+
+    const showDialogImport = () =>{
+        setDialogImport(true)
+    }
 
     const showDialogExport = () =>{
         setDialogExport(true)
@@ -109,13 +116,13 @@ const Empleados = () => {
             <div className='grid  my-4'>
                 <div className='col-10 hidden xl:block lg:block'>
                     <Button onClick={showModalNewUsu} icon="pi pi-plus" className="p-button-rounded mx-4"></Button>
-                    <Button icon="pi pi-user-plus" iconPos="right" label="Agregar Varios" className="p-button-rounded p-button-outlined mx-2" />
-                    <Button icon="pi pi-file-excel" onClick={showDialogExport} iconPos="right" label="Generar Reporte" className="p-button-rounded p-button-outlined mx-2" />
+                    <Button icon="pi pi-file-excel" onClick={showDialogImport} iconPos="right" label="Cargar Archivo" className="p-button-rounded p-button-outlined mx-2" />
+                    <Button icon="pi pi-download" onClick={showDialogExport} iconPos="right" label="Generar Reporte" className="p-button-rounded p-button-outlined mx-2" />
                 </div>
                 <div className='col-8 md:col-10 block xl:hidden lg:hidden'>
                     <Button onClick={showModalNewUsu} icon="pi pi-plus" className="p-button-rounded mx-3 my-1"></Button>
-                    <Button icon="pi pi-user-plus" iconPos="right" className="p-button-rounded p-button-outlined mx-3 my-1" />
-                    <Button icon="pi pi-file-excel" onClick={showDialogExport} iconPos="right" className="p-button-rounded p-button-outlined mx-3 my-1" />
+                    <Button icon="pi pi-file-excel" onClick={showDialogImport} iconPos="right" className="p-button-rounded p-button-outlined mx-3 my-1" />
+                    <Button icon="pi pi-download" onClick={showDialogExport} iconPos="right" className="p-button-rounded p-button-outlined mx-3 my-1" />
                 </div>
                 <div className='col-4 xl:col-2 lg:col-2 md:col-2'>
                     <span className="p-buttonset">
@@ -230,6 +237,7 @@ const Empleados = () => {
         setDialogExport(false)
         setModalDocumentosUsuario(false)
         setModalChangePass(false)
+        setDialogImport(false)
     }
 
     const header1 = renderHeader1();
@@ -381,6 +389,9 @@ const Empleados = () => {
                 </Dialog>
                 <Dialog header='Nuevo Empleado' footer={footerNewEmpleado} draggable={false} position='center' blockScroll={true} visible={newUsuDialog} style={{ width: '40vw' }} breakpoints={{'1150px': '55vw', '960px': '75vw', '640px': '100vw'}} onHide={hideModal}>
                     <NewUsuario formik={empleadoFormik} />
+                </Dialog>
+                <Dialog header='Cargar Archivo' draggable={false} position='center' blockScroll={true} visible={dialogImport} style={{ width: '40vw' }} breakpoints={{'1150px': '55vw', '960px': '75vw', '640px': '100vw'}} onHide={hideModal}>
+                    <CargarArchivo toast={toast} hideModal={hideModal}/>
                 </Dialog>
                 <Dialog header='Generar Reporte' draggable={false} position='center' blockScroll={true} visible={dialogExport} style={{ width: '40vw' }} breakpoints={{'1150px': '55vw', '960px': '75vw', '640px': '100vw'}} onHide={hideModal}>
                     <GenerarReporte toast={toast} hideModal={hideModal}/>

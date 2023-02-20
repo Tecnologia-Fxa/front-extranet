@@ -43,7 +43,7 @@ const Dashboard = () => {
     }, []);
 
     const handleRedireccionUsu = () =>{
-        Router.push('/dashboard/usuarios')
+        Router.push('/dashboard/empleados')
     }
 
     const [todasCiudades, setTodasCiudades] = useState(false)
