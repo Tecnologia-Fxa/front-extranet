@@ -34,7 +34,6 @@ const Login = () => {
   return (
     <div className="flex align-items-center justify-content-center" style={{width: "100%", height: "100%", position: 'fixed'}}>
         <div className="card p-4">
-            {process.env.NEXT_PUBLIC_RUTA_API + '/credencial'}
             <div className="flex align-items-center justify-content-center">
                     <form onSubmit={formik.handleSubmit} className="p-fluid relative">
                         <h5 className="text-center">Iniciar Sesión en SIGE</h5>
