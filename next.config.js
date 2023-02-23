@@ -2,10 +2,10 @@
 const nextConfig = {
     reactStrictMode: false,
     trailingSlash: true,
-    basePath: '/extranet-fxa',
+    basePath: '/',
     publicRuntimeConfig: {
-        contextPath: '/extranet-fxa',
-        uploadPath: process.env.NODE_ENV === 'production' ? '/extranet-fxa/upload.php' : '/api/upload'
+        contextPath: '/',
+        uploadPath: process.env.NODE_ENV === 'production' ? '/upload.php' : '/api/upload'
     }
 };
 module.exports = nextConfig;
