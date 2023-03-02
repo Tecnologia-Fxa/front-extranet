@@ -10,7 +10,8 @@ import AppTopbar from './AppTopbar';
 import AppConfig from './AppConfig';
 import { LayoutContext } from './context/layoutcontext';
 import PrimeReact from 'primereact/api';
-/* import TawkMessengerReact from '@tawk.to/tawk-messenger-react'; */
+import tawkTo from '../helpers/tawkto'
+import { EmpleadoService } from '../services/EmpleadoService';
 
 const Layout = (props) => {
     const { layoutConfig, layoutState, setLayoutState } = useContext(LayoutContext);
@@ -85,6 +86,14 @@ const Layout = (props) => {
         });
     }, []);
 
+    useEffect(()=>{
+        const empleadoService = new EmpleadoService()
+        empleadoService.getInfoTawkTo().then(response =>{
+            
+            tawkTo(response.data.nombres, response.data.apellidos, response.data.correo_electronico, response.data.cargo.nombre_cargo)
+        })
+    },[])
+
     PrimeReact.ripple = true;
 
     useUnmountEffect(() => {
@@ -138,9 +147,7 @@ const Layout = (props) => {
                 <div className="layout-mask"></div>
                 
             </div>
-            {/* <TawkMessengerReact
-                    propertyId={process.env.NEXT_PUBLIC_propertyId_tawkto}
-                    widgetId={process.env.NEXT_PUBLIC_widgetId_tawkto}/> */}
+
         </React.Fragment>
     );
 };

@@ -9,7 +9,6 @@ import '../styles/demo/Demos.scss';
 import Router from 'next/router';
 import { CookiesProvider } from "react-cookie"
 import axiosMethod from '../services/AxiosConfig'
-import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 
 axiosMethod({router:Router, test:"test"})

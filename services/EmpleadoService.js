@@ -75,4 +75,8 @@ export class EmpleadoService {
     cargueMasivo(data){
         return axios.post(`${API}/cargue-masivo`, data)
     }
+
+    getInfoTawkTo(){
+        return axios.get(`${API}/tawkto-info`)
+    }
 }
