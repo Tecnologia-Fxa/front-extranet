@@ -9,6 +9,7 @@ import '../styles/demo/Demos.scss';
 import Router from 'next/router';
 import { CookiesProvider } from "react-cookie"
 import axiosMethod from '../services/AxiosConfig'
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 
 axiosMethod({router:Router, test:"test"})
@@ -17,6 +18,9 @@ export default function MyApp({ Component, pageProps }) {
     if (Component.getLayout) {
         return (
             <CookiesProvider>
+                <TawkMessengerReact
+                    propertyId={process.env.NEXT_PUBLIC_propertyId_tawkto}
+                    widgetId={process.env.NEXT_PUBLIC_widgetId_tawkto}/>
                 <LayoutProvider>
                     {Component.getLayout(<Component {...pageProps} />)}
                 </LayoutProvider>
@@ -25,6 +29,9 @@ export default function MyApp({ Component, pageProps }) {
     } else if (Component.getNormalPage){
         return (
             <CookiesProvider>
+                <TawkMessengerReact
+                    propertyId={process.env.NEXT_PUBLIC_propertyId_tawkto}
+                    widgetId={process.env.NEXT_PUBLIC_widgetId_tawkto}/>
                 <Component />
             </CookiesProvider>
         )
@@ -32,6 +39,9 @@ export default function MyApp({ Component, pageProps }) {
         return (
             <CookiesProvider>
                 <LayoutProvider>
+                    <TawkMessengerReact
+                        propertyId={process.env.NEXT_PUBLIC_propertyId_tawkto}
+                        widgetId={process.env.NEXT_PUBLIC_widgetId_tawkto}/>
                     <Layout>
                         <Component {...pageProps} />
                     </Layout>
