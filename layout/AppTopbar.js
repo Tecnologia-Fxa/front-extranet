@@ -9,6 +9,7 @@ import { classNames } from 'primereact/utils';
 import { LayoutContext } from './context/layoutcontext';
 import Cuenta from '../pages/dashboard/cuenta/Cuenta'
 import CredencialService from '../services/CredencialService';
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 const AppTopbar = forwardRef((props, ref) => {
     const { layoutState, onMenuToggle } = useContext(LayoutContext);
@@ -98,7 +99,7 @@ const AppTopbar = forwardRef((props, ref) => {
             <Link href="/dashboard">
                 <a className="layout-topbar-logo">
                         <Image 
-                            src={`/extranet-fxa/demo/images/logo-fxa-version-principal.svg`}
+                            src={`/demo/images/logo-fxa-version-principal.svg`}
                             width={50} 
                             height={55}
                         />
@@ -126,6 +127,11 @@ const AppTopbar = forwardRef((props, ref) => {
             <Dialog header={<h4 className='text-center'>Cambio de contraseña</h4>} draggable={false} position='center' blockScroll={true} visible={dialogCuenta} style={{ width: '25vw' }} breakpoints={{'1150px': '30vw', '960px': '35vw', '640px': '100vw'}} onHide={hideModal}>
                 <Cuenta hideModal={hideModal} toast={toast}/>
             </Dialog>
+
+            <TawkMessengerReact
+                propertyId={process.env.NEXT_PUBLIC_propertyId_tawkto}
+                widgetId={process.env.NEXT_PUBLIC_widgetId_tawkto}
+            />
         </div>
     );
 });

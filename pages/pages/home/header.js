@@ -110,7 +110,7 @@ const Header = () => {
         <div className={headerStyles["menu-mountain"]}/>
         <div className={headerStyles["menu-mountain2"]}/>
         <div className={headerStyles["menu-mountain3"]}>
-            <img src={'/extranet-fxa/demo/images/logo-fxa-version-principal.svg'} alt="logo" className={headerStyles['logo-menu-mountain']}/>
+            <img src={'/demo/images/logo-fxa-version-principal.svg'} alt="logo" className={headerStyles['logo-menu-mountain']}/>
         </div>
         <div className={headerStyles["menu-mountain4"]}/>
       </div>

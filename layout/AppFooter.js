@@ -10,7 +10,7 @@ const AppFooter = () => {
     return (
         <div className="layout-footer">
             <Image
-                src={`/extranet-fxa/demo/images/logo-fxa-version-${layoutConfig.colorScheme === 'light' ? 'negra' : 'blanca'}.svg`}
+                src={`/demo/images/logo-fxa-version-${layoutConfig.colorScheme === 'light' ? 'negra' : 'blanca'}.svg`}
                 alt="Logo"
                 height={20}
                 width={30}

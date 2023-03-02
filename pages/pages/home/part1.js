@@ -10,13 +10,13 @@ const Part1 = () => {
         <Link href={'/login'}>
           <div>
             <Image 
-              src={'/extranet-fxa/demo/home/Desktop.png'}
+              src={'/demo/home/Desktop.png'}
               alt="" 
               layout='fill'
               className='hidden md:block'
             />
             <Image 
-              src={'/extranet-fxa/demo/home/Mobile.png'} 
+              src={'/demo/home/Mobile.png'} 
               alt="" 
               layout='fill'
               className='block md:hidden'
