@@ -10,6 +10,7 @@ import AppTopbar from './AppTopbar';
 import AppConfig from './AppConfig';
 import { LayoutContext } from './context/layoutcontext';
 import PrimeReact from 'primereact/api';
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 const Layout = (props) => {
     const { layoutConfig, layoutState, setLayoutState } = useContext(LayoutContext);
@@ -137,7 +138,9 @@ const Layout = (props) => {
                 <div className="layout-mask"></div>
                 
             </div>
-            
+            <TawkMessengerReact
+                    propertyId={process.env.NEXT_PUBLIC_propertyId_tawkto}
+                    widgetId={process.env.NEXT_PUBLIC_widgetId_tawkto}/>
         </React.Fragment>
     );
 };
