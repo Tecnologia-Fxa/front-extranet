@@ -27,7 +27,7 @@ const CargarArchivo = params => {
       <div className="card w-10 mx-6">
         <p className='text-700 font-xl'>En el siguiente espacio podra realizar la carga de archivos para la creación y/o actualización de usuarios de manera masiva.</p>
       </div>
-      <a href='/extranet-fxa/plantilla/PlantillaExtranet.xlsx' className='p-button p-button-text p-button-raised mr-2 mb-4 block'>Descargar Plantilla</a>
+      <a href='/plantilla/PlantillaExtranet.xlsx' className='p-button p-button-text p-button-raised mr-2 mb-4 block'>Descargar Plantilla</a>
       <div className='w-full grid'>
         <label htmlFor="file" className="p-button p-button-outlined mr-2 mb-4 block col-5">
             <i className="pi pi-upload"></i> Cargar archivo
