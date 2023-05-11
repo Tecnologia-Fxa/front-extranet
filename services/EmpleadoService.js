@@ -73,16 +73,7 @@ export class EmpleadoService {
     }
 
     cargueMasivo(data){
-        let largo = data.length
-        if (largo < 20)
-            return axios.post(`${API}/cargue-masivo`, data)
-        else{
-            data.forEach((element,key) => {
-                if(key>20)
-                axios.post(API, element)
-            });
-            return axios.post(`${API}/cargue-masivo`, data.slice(0, 20))
-        }
+        return axios.post(`${API}/cargue-masivo`, data)
     }
 
     getInfoTawkTo(){
