@@ -45,6 +45,7 @@ const JefeDirecto = (props) => {
     useEffect(() => {
         if(!props.jefeZona[0] || estadoPagina === true){
             jefeDirectoService.getTableData().then(res=>{
+                console.log(res)
                 props.setJefeZona(res.data)
                 setData(res.data)
                 setLoading1(false)

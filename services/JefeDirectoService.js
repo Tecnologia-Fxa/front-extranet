@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = process.env.REACT_APP_API + '/jefe-directo'
+const API = process.env.NEXT_PUBLIC_RUTA_API + '/jefe-directo'
 
 class JefeDirectoService {
 
