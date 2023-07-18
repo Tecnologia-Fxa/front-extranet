@@ -10,6 +10,7 @@ const MenuItems ={
                             {label: 'Perfil', icon: 'pi pi-fw pi-user', to: '/dashboard/perfil'},
                             {label: 'Documentos', icon: 'pi pi-fw pi-file-pdf', to: '/dashboard/documentos-usuario'},
                             {label: 'Generar Certificado', icon: 'pi pi-fw pi-download', to: '/dashboard/generar-certificado'},
+                            {label: 'Convocatoria FXA', icon: 'pi pi-fw pi-comments', to: '/dashboard/convocatoria'},
                         ]
                     },
                     {
@@ -19,6 +20,7 @@ const MenuItems ={
                             {label: 'Empleados', icon: 'pi pi-fw pi-users', to: '/dashboard/empleados'},
                             {label: 'Permisos', icon: 'pi pi-fw pi-shield', to: '/dashboard/permisos'},
                             {label: 'Otros Datos', icon: 'pi pi-fw pi-paperclip', to: '/dashboard/tablas-extra'},
+                            {label: 'Gestionar Convocatorias', icon: 'pi pi-fw pi-pencil', to: '/dashboard/gestionar-convocatoria'},
                         ]
                     },
                     {
@@ -190,6 +192,7 @@ const MenuItems ={
                             {label: 'Perfil', icon: 'pi pi-fw pi-user', to: '/dashboard/perfil'},
                             {label: 'Documentos', icon: 'pi pi-fw pi-file-pdf', to: '/dashboard/documentos-usuario'},
                             {label: 'Generar Certificado', icon: 'pi pi-fw pi-download', to: '/dashboard/generar-certificado'},
+                            {label: 'Convocatoria FXA', icon: 'pi pi-fw pi-comments', to: '/dashboard/convocatoria'},
                         ]
                     },
                     {
@@ -197,6 +200,7 @@ const MenuItems ={
                         items: [
                             {label: 'Dashboard', icon: 'pi pi-fw pi-briefcase', to: '/dashboard'},
                             {label: 'Usuarios', icon: 'pi pi-fw pi-users', to: '/dashboard/empleados'},
+                            {label: 'Gestionar Convocatorias', icon: 'pi pi-fw pi-pencil', to: '/dashboard/gestionar-convocatoria'}
                         ]
                     }
                     
@@ -210,6 +214,7 @@ const MenuItems ={
                             {label: 'Perfil', icon: 'pi pi-fw pi-user', to: '/dashboard/perfil'},
                             {label: 'Documentos', icon: 'pi pi-fw pi-file-pdf', to: '/dashboard/documentos-usuario'},
                             {label: 'Generar Certificado', icon: 'pi pi-fw pi-download', to: '/dashboard/generar-certificado'},
+                            {label: 'Convocatoria FXA', icon: 'pi pi-fw pi-comments', to: '/dashboard/convocatoria'}
                         ]
                     }
                 ]
@@ -218,7 +223,7 @@ const MenuItems ={
             default:
                 return [
                     {
-                        label: 'err',
+                        label: 'Cargando...',
                     }
                 ]
         }

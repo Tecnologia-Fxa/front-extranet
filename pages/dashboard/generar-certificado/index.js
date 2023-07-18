@@ -68,7 +68,7 @@ const formatterPeso = new Intl.NumberFormat('es-CO', {
 
         doc.addImage(`${contextPath}/demo/images/certificado/firma.jpeg`,'JPEG',80,560,150,80)
         doc.text("KAREN LIZETH MORALES ALVARADO", 80, 645)
-        doc.text("Coordinadora de Recursos humanos", 80, 660)
+        doc.text("Directora de talento humano", 80, 660)
     
         doc.addImage(`${contextPath}/demo/images/certificado/FooterPdf.png`,'png',30,800,550,20)
 

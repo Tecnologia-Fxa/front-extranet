@@ -58,10 +58,7 @@ const Datos = (props) => {
         </div>
         <div className='text-left mb-2'>
             <span className='text-800 font-medium'>Fecha De Nacimiento:</span>
-            {
-                console.log(new Date(props.empleado.values.fecha_nacimiento))
-            }
-            <Calendar dateFormat="dd/mm/yy" name="fecha_nacimiento" yearRange={`${today.getFullYear()-90}:${today.getFullYear()-14}`} id="fecha_nacimiento" value={new Date(props.empleado.values.fecha_nacimiento)} onChange={props.empleado.handleChange}  monthNavigator yearNavigator className={classNames({ 'p-invalid': isFormFieldValid('fecha_nacimiento') }+' inputForm')}
+            <Calendar dateFormat="dd/mm/yy" name="fecha_nacimiento" yearRange={`${today.getFullYear()-90}:${today.getFullYear()-14}`} id="fecha_nacimiento" value={new Date(`${props.empleado.values.fecha_nacimiento} 08:00:00`)} onChange={props.empleado.handleChange}  monthNavigator yearNavigator className={classNames({ 'p-invalid': isFormFieldValid('fecha_nacimiento') }+' inputForm')}
                 readOnlyInput monthNavigatorTemplate={monthNavigatorTemplate} yearNavigatorTemplate={yearNavigatorTemplate}/> 
             <div>{getFormErrorMessage('fecha_nacimiento')}</div>
         </div>
